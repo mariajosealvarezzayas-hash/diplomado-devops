@@ -16,6 +16,7 @@ on:                        # disparadores
     branches: [main]
   pull_request:
     branches: [main]
+    
 
 jobs:
   pruebas:
@@ -27,5 +28,9 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt
       - run: pytest -v
+
+
+
+      
 
       
