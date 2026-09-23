@@ -10,7 +10,6 @@
 
 name: CI
 
-
 on:                        # disparadores
   push:
     branches: [main]
@@ -26,5 +25,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt
-      - run: pytest -v     # TODO reto 1: reemplazar por push a main y pull_request
-
+      - run: pytest -v
