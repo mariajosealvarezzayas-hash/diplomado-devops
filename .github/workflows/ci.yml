@@ -7,9 +7,7 @@
 # Reto 4 — agregar el job del quality gate del modelo.
 #
 # Documentación: https://docs.github.com/actions
-
 name: CI
-
 
 on:                        # disparadores
   push:
@@ -17,18 +15,19 @@ on:                        # disparadores
   pull_request:
     branches: [main]
     
-
 jobs:
-  pruebas:
-    runs-on: ubuntu-latest   # máquina nueva y vacía
-    steps:
+ lint:
+   name: lint y formato
+   runs-on: ubuntu-latest   # máquina nueva y vacía
+   steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt
       - run: pytest -v
-
+      - name: Por ahora no verifica nada
+        run: echo "El pipeline corre, pero todavía no verifica nada.
 
 
       
