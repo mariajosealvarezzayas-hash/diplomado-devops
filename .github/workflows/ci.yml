@@ -43,7 +43,7 @@ jobs:
           name: cobertura
           path: coverage.xml
       - name: Por ahora no verifica nada
-        run: echo "El pipeline corre, pero todavia no verifica nada
+        run: echo "El pipeline corre, pero todavia no verifica nada"
 
 
       
